@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="generadormeme.css" />
+    <script
+      src="https://kit.fontawesome.com/5420d9f4fe.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>generadordememes</title>
+  </head>
+  <body data-theme="light-theme">
+    <header>
+      <h1 class="title">Generador de Memes</h1>
+      <div class="btn-container btn">
+        <button class="btn">💾Imagen</button>
+        <button class="btn">🅰Texto</button>
+        <button class="btn-i">
+          <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Modo claro
+        </button>
+      </div>
+    </header>
+
+    <div class="all-meme">
+      <main class="meme-container">
+        <div class="meme">
+          <p id="top-text">TOP TEXT</p>
+          <div id="img-meme" aria-label="img de meme"></div>
+          <p id="bottom-text">BOTTOM TEXT</p>
+        </div>
+        <button class="download">Descargar meme</button>
+      </main>
+
+      <aside class="column">
+        <section class="img-column">
+          <h2>IMAGEN</h2>
+          <div>
+            <h3>URL</h3>
+            <input type="text" aria-label="Url de img" />
+          </div>
+          <div>
+            <h3>FONDO</h3>
+            <div class="fondo">
+              <div>
+                <input type="color" value="#000000" />
+                <span aria-hidden="true">#000000</span>
+              </div>
+              <div>
+                <select id="tips-fondo" aria-label="modo de fondo de la img">
+                  <option value="unset">Ninguno</option>
+                  <option value="lighten">Aclarar</option>
+                  <option value="darken">Oscurecer</option>
+                  <option value="difference">Diferencia</option>
+                  <option value="luminosity">Luminosidad</option>
+                  <option value="multiply">Multiplicar</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3>FILTROS</h3>
+            <div class="img-filters">
+              <label for="brillo">BRILLO</label>
+              <input type="range" id="brillo" />
+            </div>
+            <div class="img-filters">
+              <label for="opacidad">OPACIDAD</label>
+              <input type="range" id="opacidad" />
+            </div>
+            <div class="img-filters">
+              <label for="contraste">CONTRASTE</label>
+              <input type="range" id="contraste" />
+            </div>
+            <div class="img-filters">
+              <label for="desenfoque">DESENFOQUE</label>
+              <input type="range" id="desenfoque" />
+            </div>
+            <div class="img-filters">
+              <label for="escala-de-grises">ESCALA DE GRISES</label>
+              <input type="range" id="escala-de-grises" />
+            </div>
+            <div class="img-filters">
+              <label for="sepia">SEPIA</label>
+              <input type="range" id="sepia" />
+            </div>
+            <div class="img-filters">
+              <label for="hue">HUE</label>
+              <input type="range" id="hue" />
+            </div>
+            <div class="img-filters">
+              <label for="saturado">SATURADO</label>
+              <input type="range" id="saturado" />
+            </div>
+            <div class="img-filters">
+              <label for="negativo">NEGATIVO</label>
+              <input type="range" id="negativo" />
+            </div>
+          </div>
+          <button class="restablish">Reestablecer filtros</button>
+        </section>
+        <section class="text">
+          <h2>TEXTO</h2>
+          <div class="box">
+            <div>
+              <h3>SUPERIOR</h3>
+              <textarea name="" id="" cols="30" rows="3">Top text</textarea>
+            </div>
+            <div>
+              <input type="checkbox" id="sin-texto" />
+              <label for="sin-texto">Sin texto superior</label>
+            </div>
+          </div>
+          <div class="box">
+            <div>
+              <h3>INFERIOR</h3>
+              <textarea name="" id="" cols="30" rows="3">Bootom text</textarea>
+            </div>
+            <div>
+              <input type="checkbox" id="sin-texto-in" />
+              <label for="sin-texto-in">Sin texto inferior</label>
+            </div>
+          </div>
+
+          <div class="box">
+            <h3>FUENTE</h3>
+            <select
+              name="Familia de fuente"
+              id=""
+              aria-label="Familia de fuente"
+            >
+              <option value="Arial">arial</option>
+              <option value="Comic Sans MS">comic sans</option>
+              <option value="Verdana">verdana</option>
+              <option value="Times New Roman">times new roman</option>
+            </select>
+
+            <input type="number" />
+          </div>
+
+          <div class="box">
+            <div class="color-fondo">
+              <div>
+                <h3>COLOR</h3>
+                <div class="input-container-color">
+                  <input type="color" value="#000000" />
+                  <span aria-hidden="true">#000000</span>
+                </div>
+              </div>
+
+              <div>
+                <h3>FONDO</h3>
+                <div class="input-container-color">
+                  <input type="color" value="#FFFFFF" />
+                  <span aria-hidden="true">#FFFFFF</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="fondo-transparente" />
+              <label for="fondo-transparente">Fondo transparente</label>
+            </div>
+          </div>
+          <div class="box">
+            <h3>CONTORNO</h3>
+            <div>
+              <button>Ninguno</button><button>Claro</button>
+              <button>Oscuro</button>
+            </div>
+          </div>
+          <div class="box">
+            <h3>ESPACIADO</h3>
+            <input type="number" />
+          </div>
+          <div>
+            <h3>INTERDELIADO</h3>
+            <select name="" id="" aria-label="Interlineado">
+              <option value="0.8">0.8</option>
+              <option value="1">1</option>
+              <option value="1.5">1.5</option>
+            </select>
+          </div>
+        </section>
+      </aside>
+    </div>
+    <script type="text/javascript" src="./meme.js"></script>
+  </body>
+</html>
