@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,97 +6,111 @@
 
 :root {
 
-    --color-header:#192229;
-    --color-background:#2A3B47;
-    --color-column:#212E36;
+    --color-header: #192229;
+    --color-background: #2A3B47;
+    --color-column: #212E36;
     --color-text: #EBEBEB;
-    
+
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
 [data-theme="light-theme"] {
 
-    --color-header:#757575;
-    --color-background:#EEEE;
-    --color-column:#EDEDED;
+    --color-header: #757575;
+    --color-background: #EEEE;
+    --color-column: #EDEDED;
     --color-text: #000000;
 
 }
 
 
-body{
+body {
 
     display: flex;
     flex-direction: column;
-    font-family:Arial, Helvetica, sans-serif;
-    background-color:var( --color-background);
-    color:var(--color-text );
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 
-header{
-    text-align: center;  
-    background-color:var(--color-header);
+header {
+    text-align: center;
+    background-color: var(--color-header);
     height: 150PX;
 
 }
 
-.title{
-   margin: 25px;
-   font-size: 40px;
+.title {
+    margin: 25px;
+    font-size: 40px;
 
 }
-.btn{
-    
+
+button {
+    background-color: var(--color-header);
+    border: 0;
+    font-size: 14px;
+}
+
+.btn {
+
     justify-content: center;
 }
 
-.btn-container{
+.btn-container .btn {
+    margin: 6px;
+
+}
+
+.btn-container {
+
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
-    padding: 0 15px ;
-    
-  
+    padding: 0 15px;
+
+
 }
 
-.meme{
+.meme {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color:#04080F;
+    background-color: #04080F;
     color: #04080F;
     height: 600px;
     max-width: 600px;
-    width:100%;
+    width: 100%;
     margin: 200px 5px 35px;
 }
 
-.meme-container{
+.meme-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 
-    
+
+
 
 }
 
 
-p{
-    background:#EBEBEB;
+p {
+    padding: 35px 40px;
+    background: #EBEBEB;
     width: 100%;
     text-align: center;
-    font-size: 50px;
-    font-weight: 800px;
+    font-size: 40px;
+    font-weight: 600;
     height: 100px;
 }
 
-.download{
+.download {
     background-color: green;
     padding: 15px 10px;
     color: #EBEBEB;
@@ -104,70 +118,75 @@ p{
 
 }
 
-.restablish{
+.restablish {
     margin-top: 30px;
 }
 
+/*
 .img-column{
     display: none;
 }
+*/
 
-.column{
-  
+.column {
+
     display: flex;
     justify-content: flex-start;
     width: 280px;
     height: 100%;
     position: fixed;
-    right:0;
-    top:0;
+    right: 0;
+    top: 0;
     padding: 20px 25px;
-    background-color:var(--color-column);
+    background-color: var(--color-column);
 
 }
 
-.fondo{
+.fondo {
     display: flex;
     justify-content: space-between;
 }
 
-section{
+section {
     width: 100%;
 }
 
 
 
-h2{
+h2 {
     text-align: center;
     font-size: 20px;
     margin: 20px;
-    
+
 }
 
-.img-filters{
+.img-filters {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
 
-.box{
+.box {
     margin-bottom: 20px;
+
 }
 
+.text {
+    display: none;
+}
 
-
-h3{
+h3 {
     font-size: 15px;
 }
 
-.color-fondo{
-display: flex;
-justify-content: space-between;
+.color-fondo {
+    display: flex;
+    justify-content: space-between;
 }
 
 input[type=color] {
     height: 27px;
-    width:27px;
+    width: 27px;
     border-radius: 50%;
     margin-right: 4px;
 }
@@ -176,20 +195,25 @@ input[type=color]::-webkit-color-swatch {
     border: none;
     border-radius: 50%;
     padding: 0;
-    
-  }
-  
-  input[type=color]::-webkit-color-swatch-wrapper {
-      border: none;
-      border-radius: 50%;
-      padding: 0;
-  }
 
-.input-container-color{
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.input-container-color {
     border-radius: 4px;
-    padding:4px;
+    padding: 4px;
 
     display: flex;
     align-items: center;
 }
 
+#img-meme {
+    height: 100%;
+    filter: brightness(50%), opacity(50%) contrast(50%) blur(50%) grayscale(50%) sepia(50%) hue-rotate(50%) saturate(50%) invert(50%);
+
+}

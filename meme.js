@@ -13,3 +13,36 @@ $(".btn-i").addEventListener("click", () => {
     $("body").setAttribute("data-theme", "light-theme");
   }
 });
+
+//url
+$(".url-img"),addEventListener("input",()=> {
+  const urlImage = $(".url-img").value
+  $("#img-meme").style.background = `url(${urlImage})`
+})
+
+$(".color"),addEventListener("input",() => {
+  $("#img-meme").style.backgroundColor = $(".color").value
+})
+
+//filtros
+
+/*const setFilterValue = (value) =>
+ (${value}%);*/
+
+/*
+$("#brillo"),addEventListener("input",() => {
+  const setFilterValue = $("#brillo").value
+  $("#img-meme").style.filter = `brightness(${setFilterValue}%)`
+})
+
+
+$("#opacidad"),addEventListener("input",() => {
+  const setFilterValue2 = $("#opacidad").value
+  $("#img-meme").style.filter = `opacity(${setFilterValue2}%)`
+})
+*/
+
+const setFilterValue= () => {
+  const brightness = $(`brillo`).value
+}
+$("#img-meme").style.filter =`brightness(${brillo})`
