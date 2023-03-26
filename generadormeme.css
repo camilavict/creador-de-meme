@@ -51,6 +51,7 @@ header {
 }
 
 button {
+    color: var(--color-text);
     background-color: var(--color-header);
     border: 0;
     font-size: 14px;
@@ -120,6 +121,8 @@ p {
 
 .restablish {
     margin-top: 30px;
+    height: 45px;
+    background-color: gray;
 }
 
 /*
@@ -127,6 +130,10 @@ p {
     display: none;
 }
 */
+
+.text {
+    display: none;
+}
 
 .column {
 
@@ -171,9 +178,6 @@ h2 {
 
 }
 
-.text {
-    display: none;
-}
 
 h3 {
     font-size: 15px;
@@ -214,6 +218,5 @@ input[type=color]::-webkit-color-swatch-wrapper {
 
 #img-meme {
     height: 100%;
-    filter: brightness(50%), opacity(50%) contrast(50%) blur(50%) grayscale(50%) sepia(50%) hue-rotate(50%) saturate(50%) invert(50%);
-
+    filter: brightness(100%) opacity(100%) contrast(100%) blur(0px) grayscale(0%) sepia(0%) hue-rotate(0deg) saturate(100%) invert(0%);
 }

@@ -15,8 +15,8 @@
     <header>
       <h1 class="title">Generador de Memes</h1>
       <div class="btn-container btn">
-        <button class="btn">💾Imagen</button>
-        <button class="btn">🅰Texto</button>
+        <button class="btn" id="btn-img">💾Imagen</button>
+        <button class="btn" id="btn-text">🅰Texto</button>
         <button class="btn-i">
           <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Modo claro
         </button>
@@ -34,6 +34,7 @@
       </main>
 
       <aside class="column">
+        
         <section class="img-column">
           <h2>IMAGEN</h2>
           <div>
@@ -64,39 +65,39 @@
             <h3>FILTROS</h3>
             <div class="img-filters">
               <label for="brillo">BRILLO</label>
-              <input type="range" id="brillo" />
+              <input type="range" id="brillo" value="100" />
             </div>
             <div class="img-filters">
               <label for="opacidad">OPACIDAD</label>
-              <input type="range" id="opacidad" />
+              <input type="range" id="opacidad" value="100" />
             </div>
             <div class="img-filters">
               <label for="contraste">CONTRASTE</label>
-              <input type="range" id="contraste" />
+              <input type="range" id="contraste" min="100" max="1000" step="1" value="100" />
             </div>
             <div class="img-filters">
               <label for="desenfoque">DESENFOQUE</label>
-              <input type="range" id="desenfoque" />
+              <input type="range" id="desenfoque" min="0" max="20" step="1" value="0" />
             </div>
             <div class="img-filters">
               <label for="escala-de-grises">ESCALA DE GRISES</label>
-              <input type="range" id="escala-de-grises" />
+              <input type="range" id="escala-de-grises" value="0" />
             </div>
             <div class="img-filters">
               <label for="sepia">SEPIA</label>
-              <input type="range" id="sepia" />
+              <input type="range" id="sepia" value="0" />
             </div>
             <div class="img-filters">
               <label for="hue">HUE</label>
-              <input type="range" id="hue" />
+              <input type="range" id="hue" min="0" max="360" step="1" value="0" />
             </div>
             <div class="img-filters">
               <label for="saturado">SATURADO</label>
-              <input type="range" id="saturado" />
+              <input type="range" id="saturado" min="100" max="1000" step="1" value="100" />
             </div>
             <div class="img-filters">
               <label for="negativo">NEGATIVO</label>
-              <input type="range" id="negativo" />
+              <input type="range" id="negativo" value="0" />
             </div>
           </div>
           <button class="restablish">Reestablecer filtros</button>
