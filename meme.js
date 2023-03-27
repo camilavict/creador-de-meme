@@ -122,3 +122,9 @@ $(".background-color-text"), addEventListener("input", () => {
   $("#bottom-text").style.backgroundColor = $(".background-color-text").value
 })
 
+//font 
+
+$("#font-family"), addEventListener("input", () => {
+  $("#top-text").style.fontFamily = $("#font-family").value
+  $("#bottom-text").style.fontFamily = $("#font-family").value
+})
