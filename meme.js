@@ -25,7 +25,11 @@ $(".color"), addEventListener("input", () => {
   $("#img-meme").style.backgroundColor = $(".color").value
 })
 
+//color fondo de img 
 
+$("#tips-fondo").addEventListener("change", () => {
+  $("#img-meme").style.backgroundBlendMode = $("#tips-fondo").value
+})
 
 //filtros
 
@@ -55,7 +59,7 @@ $("[type=range]"), addEventListener("input", () => {
 
 
 
-//aside texto
+//aside cambio de imagen a  texto
 
 $("#btn-text").addEventListener("click", () => {
   $(".text").style.display = "block";
@@ -66,3 +70,55 @@ $("#btn-img").addEventListener("click", () => {
   $(".text").style.display = "none";
   $(".img-column").style.display = "block";
 })
+
+//modifica texto
+
+$("#up-text").addEventListener("input", () => {
+
+  $("#top-text").innerText = $("#up-text").value
+})
+
+$("#down-text").addEventListener("input", () => {
+
+  $("#bottom-text").innerText = $("#down-text").value
+})
+
+
+
+// checked text
+
+$("#no-text").addEventListener("change", () => {
+  const isChecked = $("#no-text").checked
+  console.log(isChecked)
+  if (isChecked) {
+    $("#top-text").style.display = "none";
+  } else {
+    $("#top-text").style.display = "block";
+  }
+})
+
+$("#no-text-botoom").addEventListener("change", () => {
+  const isChecked = $("#no-text-botoom").checked
+  if (isChecked) {
+    $("#bottom-text").style.display = "none";
+  } else {
+    $("#bottom-text").style.display = "block";
+  }
+})
+// color de texto
+
+$(".color-top-text"), addEventListener("input", () => {
+  $("#top-text").style.color = $(".color-top-text").value
+})
+
+$(".color-top-text"), addEventListener("input", () => {
+  $("#bottom-text").style.color = $(".color-top-text").value
+})
+
+//color de texto fondo
+
+$(".background-color-text"), addEventListener("input", () => {
+  $("#top-text").style.backgroundColor = $(".background-color-text").value
+  $("#bottom-text").style.backgroundColor = $(".background-color-text").value
+})
+

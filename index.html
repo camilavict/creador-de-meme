@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <title>generadordememes</title>
+    
   </head>
   <body data-theme="light-theme">
     <header>
@@ -107,35 +108,34 @@
           <div class="box">
             <div>
               <h3>SUPERIOR</h3>
-              <textarea name="" id="" cols="30" rows="3">Top text</textarea>
+              <textarea  id="up-text" cols="30" rows="3">TOP TEXT</textarea>
             </div>
             <div>
-              <input type="checkbox" id="sin-texto" />
-              <label for="sin-texto">Sin texto superior</label>
+              <input type="checkbox" id="no-text"  />
+              <label for="no-text">Sin texto superior</label>
             </div>
           </div>
           <div class="box">
             <div>
               <h3>INFERIOR</h3>
-              <textarea name="" id="" cols="30" rows="3">Bootom text</textarea>
+              <textarea id="down-text" cols="30" rows="3">Bootom text</textarea>
             </div>
             <div>
-              <input type="checkbox" id="sin-texto-in" />
-              <label for="sin-texto-in">Sin texto inferior</label>
+              <input type="checkbox" id="no-text-botoom" />
+              <label for="no-text-botoom">Sin texto inferior</label>
             </div>
           </div>
 
           <div class="box">
             <h3>FUENTE</h3>
             <select
-              name="Familia de fuente"
-              id=""
+              id="font-family"
               aria-label="Familia de fuente"
             >
-              <option value="Arial">arial</option>
-              <option value="Comic Sans MS">comic sans</option>
-              <option value="Verdana">verdana</option>
-              <option value="Times New Roman">times new roman</option>
+              <option value="Arial, Helvetica, sans-serif">Arial</option>
+              <option value="Comic Sans MS">Comic sans</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Times New Roman">Times new roman</option>
             </select>
 
             <input type="number" />
@@ -146,7 +146,7 @@
               <div>
                 <h3>COLOR</h3>
                 <div class="input-container-color">
-                  <input type="color" value="#000000" />
+                  <input type="color" value="#000000" class="color-top-text"/>
                   <span aria-hidden="true">#000000</span>
                 </div>
               </div>
@@ -154,7 +154,7 @@
               <div>
                 <h3>FONDO</h3>
                 <div class="input-container-color">
-                  <input type="color" value="#FFFFFF" />
+                  <input type="color" value="#FFFFFF" class="background-color-text"/>
                   <span aria-hidden="true">#FFFFFF</span>
                 </div>
               </div>
