@@ -101,7 +101,7 @@
               <input type="range" id="negativo" value="0" />
             </div>
           </div>
-          <button class="restablish">Reestablecer filtros</button>
+          <button id="rest">Reestablecer filtros</button>
         </section>
         <section class="text">
           <h2>TEXTO</h2>
@@ -121,8 +121,8 @@
               <textarea id="down-text" cols="30" rows="3">Bootom text</textarea>
             </div>
             <div>
-              <input type="checkbox" id="no-text-botoom" />
-              <label for="no-text-botoom">Sin texto inferior</label>
+              <input type="checkbox" id="no-text-bottom" />
+              <label for="no-text-bottom">Sin texto inferior</label>
             </div>
           </div>
 
@@ -138,7 +138,7 @@
               <option value="Times New Roman">Times new roman</option>
             </select>
 
-            <input type="number" />
+            <input id="number-for-p" type="number" min="0" max="100" value="40"/>
           </div>
 
           <div class="box">
@@ -160,27 +160,31 @@
               </div>
             </div>
             <div>
-              <input type="checkbox" id="fondo-transparente" />
+              <input type="checkbox" id="transparent-background" />
               <label for="fondo-transparente">Fondo transparente</label>
             </div>
           </div>
           <div class="box">
             <h3>CONTORNO</h3>
             <div>
-              <button>Ninguno</button><button>Claro</button>
-              <button>Oscuro</button>
+              <button id="none">Ninguno</button>
+              <button id="clear">Claro</button>
+              <button id="dark" >Oscuro</button>
             </div>
           </div>
           <div class="box">
             <h3>ESPACIADO</h3>
-            <input type="number" />
+            <input id="spacing"  value="35" min="10" max="50" type="number" />
           </div>
           <div>
             <h3>INTERDELIADO</h3>
-            <select name="" id="" aria-label="Interlineado">
+            <select  id="leading" aria-label="Interlineado">
               <option value="0.8">0.8</option>
               <option value="1">1</option>
+              <option value="1.2" selected>1.2</option>
               <option value="1.5">1.5</option>
+              <option value="2">2</option>
+              <option value="2.5">2.5</option>
             </select>
           </div>
         </section>
