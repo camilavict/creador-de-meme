@@ -9,15 +9,28 @@
       src="https://kit.fontawesome.com/5420d9f4fe.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+      crossorigin="anonymous"
+    ></script>
     <title>generadordememes</title>
-    
   </head>
   <body data-theme="light-theme">
     <header>
       <h1 class="title">Generador de Memes</h1>
       <div class="btn-container btn">
-        <button class="btn" id="btn-img">💾Imagen</button>
-        <button class="btn" id="btn-text">🅰Texto</button>
+        <button class="btn" id="btn-img">
+          <i class="fa-solid fa-image"></i>Imagen
+        </button>
+        <button class="btn" id="btn-text">
+          <i class="fa-solid fa-font"></i>Texto
+        </button>
         <button class="btn-i">
           <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Modo claro
         </button>
@@ -31,26 +44,38 @@
           <div id="img-meme" aria-label="img de meme"></div>
           <p id="bottom-text">BOTTOM TEXT</p>
         </div>
-        <button class="download">Descargar meme</button>
+        <button type="button" data-dowload="img-meme" class="download">
+          Descargar meme
+        </button>
       </main>
 
       <aside class="column">
-        
+        <button class="close-column">
+          <i class="fa-solid fa-xmark fa-lg"></i>
+        </button>
         <section class="img-column">
           <h2>IMAGEN</h2>
           <div>
             <h3>URL</h3>
-            <input class="url-img" type="text" aria-label="Url de img" placeholder="https://www.example.com"/>
+            <input
+              class="url-img"
+              type="text"
+              aria-label="Url de img"
+              placeholder="https://www.example.com"
+            />
           </div>
           <div>
             <h3>FONDO</h3>
-            <div class="fondo">
+            <div class="background">
               <div>
                 <input type="color" value="#000000" class="color" />
                 <span aria-hidden="true">#000000</span>
               </div>
               <div>
-                <select id="tips-fondo" aria-label="modo de fondo de la img">
+                <select
+                  id="tips-background"
+                  aria-label="modo de fondo de la img"
+                >
                   <option value="unset">Ninguno</option>
                   <option value="lighten">Aclarar</option>
                   <option value="darken">Oscurecer</option>
@@ -74,11 +99,25 @@
             </div>
             <div class="img-filters">
               <label for="contraste">CONTRASTE</label>
-              <input type="range" id="contraste" min="100" max="1000" step="1" value="100" />
+              <input
+                type="range"
+                id="contraste"
+                min="100"
+                max="1000"
+                step="1"
+                value="100"
+              />
             </div>
             <div class="img-filters">
               <label for="desenfoque">DESENFOQUE</label>
-              <input type="range" id="desenfoque" min="0" max="20" step="1" value="0" />
+              <input
+                type="range"
+                id="desenfoque"
+                min="0"
+                max="20"
+                step="1"
+                value="0"
+              />
             </div>
             <div class="img-filters">
               <label for="escala-de-grises">ESCALA DE GRISES</label>
@@ -90,11 +129,25 @@
             </div>
             <div class="img-filters">
               <label for="hue">HUE</label>
-              <input type="range" id="hue" min="0" max="360" step="1" value="0" />
+              <input
+                type="range"
+                id="hue"
+                min="0"
+                max="360"
+                step="1"
+                value="0"
+              />
             </div>
             <div class="img-filters">
               <label for="saturado">SATURADO</label>
-              <input type="range" id="saturado" min="100" max="1000" step="1" value="100" />
+              <input
+                type="range"
+                id="saturado"
+                min="100"
+                max="1000"
+                step="1"
+                value="100"
+              />
             </div>
             <div class="img-filters">
               <label for="negativo">NEGATIVO</label>
@@ -108,10 +161,10 @@
           <div class="box">
             <div>
               <h3>SUPERIOR</h3>
-              <textarea  id="up-text" cols="30" rows="3">TOP TEXT</textarea>
+              <textarea id="up-text" cols="30" rows="3">TOP TEXT</textarea>
             </div>
             <div>
-              <input type="checkbox" id="no-text"  />
+              <input type="checkbox" id="no-text" />
               <label for="no-text">Sin texto superior</label>
             </div>
           </div>
@@ -128,25 +181,28 @@
 
           <div class="box">
             <h3>FUENTE</h3>
-            <select
-              id="font-family"
-              aria-label="Familia de fuente"
-            >
+            <select id="font-family" aria-label="Familia de fuente">
               <option value="Arial, Helvetica, sans-serif">Arial</option>
               <option value="Comic Sans MS">Comic sans</option>
               <option value="Verdana">Verdana</option>
               <option value="Times New Roman">Times new roman</option>
             </select>
 
-            <input id="number-for-p" type="number" min="0" max="100" value="40"/>
+            <input
+              id="number-for-p"
+              type="number"
+              min="0"
+              max="100"
+              value="40"
+            />
           </div>
 
           <div class="box">
-            <div class="color-fondo">
+            <div class="color-background">
               <div>
                 <h3>COLOR</h3>
                 <div class="input-container-color">
-                  <input type="color" value="#000000" class="color-top-text"/>
+                  <input type="color" value="#000000" class="color-top-text" />
                   <span aria-hidden="true">#000000</span>
                 </div>
               </div>
@@ -154,7 +210,11 @@
               <div>
                 <h3>FONDO</h3>
                 <div class="input-container-color">
-                  <input type="color" value="#FFFFFF" class="background-color-text"/>
+                  <input
+                    type="color"
+                    value="#FFFFFF"
+                    class="background-color-text"
+                  />
                   <span aria-hidden="true">#FFFFFF</span>
                 </div>
               </div>
@@ -169,16 +229,16 @@
             <div>
               <button id="none">Ninguno</button>
               <button id="clear">Claro</button>
-              <button id="dark" >Oscuro</button>
+              <button id="dark">Oscuro</button>
             </div>
           </div>
           <div class="box">
             <h3>ESPACIADO</h3>
-            <input id="spacing"  value="35" min="10" max="50" type="number" />
+            <input id="spacing" value="35" min="10" max="50" type="number" />
           </div>
           <div>
             <h3>INTERDELIADO</h3>
-            <select  id="leading" aria-label="Interlineado">
+            <select id="leading" aria-label="Interlineado">
               <option value="0.8">0.8</option>
               <option value="1">1</option>
               <option value="1.2" selected>1.2</option>
