@@ -1,5 +1,17 @@
 const $ = (selector) => document.querySelector(selector);
 
+const downloadButton = document.getElementById("download-btn");
+const meme = document.getElementById("meme");
+
+downloadButton.addEventListener("click", () => downloadMeme());
+
+const downloadMeme = () => {
+  domtoimage.toBlob(meme).then(function (blob) {
+    window.saveAs(blob, "mi-meme.png");
+  });
+};
+
+
 $(".btn-i").addEventListener("click", () => {
   const currentTheme = $("body").getAttribute("data-theme");
   if (currentTheme === "light-theme") {
@@ -32,6 +44,7 @@ $(".url-img").addEventListener("input", () => {
 
 $(".color").addEventListener("input", () => {
   $("#img-meme").style.backgroundColor = $(".color").value
+  $("#bg-color-hex").innerText = $(".color").value
 })
 
 //color fondo de img 
@@ -53,7 +66,7 @@ const setFilterValue = () => {
   const saturate = $("#saturado").value;
   const invert = $("#negativo").value;
 
-  const filters = `brightness(${brightness}%) opacity(${opacity}%) contrast(${contrast}%) blur(${blurPx}px) grayscale(${grayscale}%) sepia(${sepia}%) hue-rotate(${hueRotateDeg}deg) saturate(${saturate}%) invert(${invert}%)`
+  const filters = `brightness(${brightness}) opacity(${opacity}%) contrast(${contrast}%) blur(${blurPx}px) grayscale(${grayscale}%) sepia(${sepia}%) hue-rotate(${hueRotateDeg}deg) saturate(${saturate}%) invert(${invert}%)`
 
   $("#img-meme").style.filter = filters
 }
@@ -155,17 +168,17 @@ $("#no-text-bottom").addEventListener("change", () => {
 
 $(".color-top-text").addEventListener("input", () => {
   $("#top-text").style.color = $(".color-top-text").value
+  $("#bottom-text").style.color = $(".color-top-text").value
+  $("#text-color-hex").innerText = $(".color-top-text").value
 })
 
-$(".color-top-text").addEventListener("input", () => {
-  $("#bottom-text").style.color = $(".color-top-text").value
-})
 
 //color de texto fondo
 
 $(".background-color-text").addEventListener("input", () => {
   $("#top-text").style.backgroundColor = $(".background-color-text").value
   $("#bottom-text").style.backgroundColor = $(".background-color-text").value
+  $("#bg-text-color-hex").innerText = $(".background-color-text").value
 })
 
 //fuente

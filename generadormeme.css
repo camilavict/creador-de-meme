@@ -68,15 +68,20 @@ button {
 }
 
 .meme {
+  height: 600px;
+  max-width: 600px;
+  width: 100%;
+  margin: 200px 5px 35px;
+}
+
+#meme {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #04080f;
   color: #04080f;
-  height: 600px;
-  max-width: 600px;
+  height: 100%;
   width: 100%;
-  margin: 200px 5px 35px;
 }
 
 .meme-container {
@@ -109,12 +114,6 @@ p {
   height: 45px;
   background-color: gray;
 }
-
-/*
-.img-column{
-    display: none;
-}
-*/
 
 .text {
   display: none;
@@ -239,12 +238,3 @@ input[type="color"]::-webkit-color-swatch-wrapper {
     display: none;
   }
 }
-
-/*
-@media screen and (max-width:700px) {
-    {
-
-    }
-    
-}
-*/

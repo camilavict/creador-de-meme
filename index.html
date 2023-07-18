@@ -19,7 +19,7 @@
       integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
       crossorigin="anonymous"
     ></script>
-    <title>generadordememes</title>
+    <title>generador de memes</title>
   </head>
   <body data-theme="light-theme">
     <header>
@@ -40,11 +40,18 @@
     <div class="all-meme">
       <main class="meme-container">
         <div class="meme">
-          <p id="top-text">TOP TEXT</p>
-          <div id="img-meme" aria-label="img de meme"></div>
-          <p id="bottom-text">BOTTOM TEXT</p>
+          <div id="meme">
+            <p id="top-text">TOP TEXT</p>
+            <div id="img-meme" aria-label="img de meme"></div>
+            <p id="bottom-text">BOTTOM TEXT</p>
+          </div>
         </div>
-        <button type="button" data-dowload="img-meme" class="download">
+        <button
+          type="button"
+          data-dowload="img-meme"
+          class="download"
+          id="download-btn"
+        >
           Descargar meme
         </button>
       </main>
@@ -69,7 +76,7 @@
             <div class="background">
               <div>
                 <input type="color" value="#000000" class="color" />
-                <span aria-hidden="true">#000000</span>
+                <span aria-hidden="true" id="bg-color-hex">#000000</span>
               </div>
               <div>
                 <select
@@ -91,7 +98,14 @@
             <h3>FILTROS</h3>
             <div class="img-filters">
               <label for="brillo">BRILLO</label>
-              <input type="range" id="brillo" value="100" />
+              <input
+                type="range"
+                step="0.1"
+                min="0"
+                max="1"
+                id="brillo"
+                value="100"
+              />
             </div>
             <div class="img-filters">
               <label for="opacidad">OPACIDAD</label>
@@ -203,7 +217,7 @@
                 <h3>COLOR</h3>
                 <div class="input-container-color">
                   <input type="color" value="#000000" class="color-top-text" />
-                  <span aria-hidden="true">#000000</span>
+                  <span aria-hidden="true" id="text-color-hex">#000000</span>
                 </div>
               </div>
 
@@ -215,7 +229,7 @@
                     value="#FFFFFF"
                     class="background-color-text"
                   />
-                  <span aria-hidden="true">#FFFFFF</span>
+                  <span aria-hidden="true" id="bg-text-color-hex">#FFFFFF</span>
                 </div>
               </div>
             </div>
